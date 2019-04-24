@@ -2,14 +2,7 @@
   "name": "nodeexpresshandlebars",
   "version": "1.0.0",
   "description": "Burger Eating App",
-  "engines": {
-    "node": "10.15.3"
-  },
-  "main": "/views/index.handlebars",
-  "dependencies": {
-    "express": "^4.16.4"
-  },
-  "devDependencies": {},
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -18,10 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/armansiyami/NodeExpressHandlebars.git"
   },
-  "author": "",
+  "author": "Arman Siyami",
   "license": "ISC",
-  "bugs": {
-    "url": "https://eat-the-burger-armansiyami.herokuapp.com/"
-  },
-  "homepage": "https://eat-the-burger-armansiyami.herokuapp.com/"
+  "homepage": "https://eat-the-burger-armansiyami.herokuapp.com/",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.8",
+    "mysql": "^2.13.0"
+  }
 }
