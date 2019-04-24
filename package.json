@@ -2,6 +2,9 @@
   "name": "nodeexpresshandlebars",
   "version": "1.0.0",
   "description": "Burger Eating App",
+  "engines": {
+    "node": "10.15.3"
+  },
   "main": "/views/index.handlebars",
   "dependencies": {},
   "devDependencies": {},
