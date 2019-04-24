@@ -1,0 +1,53 @@
+<script>
+    const deleteFunc = function(id) {
+    var id = id.valueOf() ;
+    console.log(id);
+
+    $.ajax("/api/burgers/" + id, {
+        type: "DELETE"
+    }).then(function() {
+
+        location.reload();
+    });
+};
+</script>
+
+<div class="container">
+    <section id="page-name">
+
+            <text class="titleLetters" >Eat-Da-Buger</text>
+    </section>
+
+    <section class="row">
+        <div class="col-md-7 col-left">
+            <table>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        {{> burgers/burger-block}}
+                    {{/unless}}
+                {{/each}}
+            </table>
+        </div>
+        <div class="col-md-5 col-right">
+            {{#each burgers}}
+                {{#if devoured}}
+                    <div>{{id}}. {{burger_name}}
+                        <button type="submit" id="{{id}}" onclick="deleteFunc(id)" class="btn-xs btn-danger" > x</button>
+                    </div>
+                {{/if}}
+            {{/each}}
+        </div>
+    </section>
+
+    <form class="create-form">
+        <div class="form-group">
+            <label for="name"></label>
+            <textarea id="name" name="burger-name" rows="2" cols="40" placeholder="What do you want to eat?"></textarea>
+        </div>
+        <button type="submit" style="height: 100px; width:200px; font-size:30px" class="btn btn-secondary">Add Burger</button>
+
+    </form>
+</div>
+
+
+
