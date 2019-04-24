@@ -10,9 +10,9 @@ else {
     connection = mysql.createConnection({
         host: "us-cdbr-iron-east-02.cleardb.net",
         port: 3306,
-        user: "b382d114ef5a4f",
-        password: "fa914d4f",
-        database: "heroku_39d27468fcc44fc"
+        user: process.env.USER,
+        password: process.env.PASS,
+        database: process.env.DB
     });
 }
 
