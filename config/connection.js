@@ -11,7 +11,7 @@ else {
         host: "us-cdbr-iron-east-02.cleardb.net",
         port: 3306,
         user: "b382d114ef5a4f",
-        password: ":fa914d4f",
+        password: "fa914d4f",
         database: "heroku_39d27468fcc44fc"
     });
 }
