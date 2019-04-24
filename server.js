@@ -1,25 +1,27 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
-var port = process.env.PORT;
+var port = process.env.PORT || 8000;
 
-var app = express();
+var server = express();
 
 
-app.use(express.static("public"));
+server.use(express.static("public"));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+server.use(bodyParser.urlencoded({ extended: false }));
 
 
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+server.engine("handlebars", exphbs({ defaultLayout: "main" }));
+server.set("view engine", "handlebars");
 
 
 var routes = require("./controllers/burgers_controller.js");
 
-app.use("/", routes);
+server.use("/", routes);
 
-app.listen(port);
+server.listen(port, function() {
+    console.log("App is running on port " + port);
+});
 
