@@ -2,7 +2,7 @@
   "name": "nodeexpresshandlebars",
   "version": "1.0.0",
   "description": "Burger Eating App",
-  "main": "server.js",
+  "main": "/views/index.handlebars",
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
